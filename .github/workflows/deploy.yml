@@ -10,14 +10,41 @@ on:
 
 jobs:
   deploy:
-    name: Check Namecheap FTP Directory
+    name: Diagnose Namecheap FTP Connection
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
 
-      - name: Check FTP Directory
+      - name: Verify FTP Server DNS
+        env:
+          FTP_SERVER: ${{ secrets.FTP_SERVER }}
+        run: |
+          python3 - <<'PY'
+          import os
+          import socket
+
+          host = os.environ["FTP_SERVER"].strip()
+
+          print("FTP hostname:", host)
+
+          try:
+              results = socket.getaddrinfo(
+                  host, 21, type=socket.SOCK_STREAM
+              )
+
+              for result in results:
+                  print("Resolved IP:", result[4][0])
+
+              print("DNS CHECK SUCCESSFUL")
+
+          except Exception as error:
+              print("DNS CHECK FAILED:", error)
+              raise
+          PY
+
+      - name: Test Namecheap FTPS Connection
         env:
           FTP_SERVER: ${{ secrets.FTP_SERVER }}
           FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
@@ -27,35 +54,60 @@ jobs:
           import os
           from ftplib import FTP_TLS
 
-          server = os.environ["FTP_SERVER"]
+          server = os.environ["FTP_SERVER"].strip()
           username = os.environ["FTP_USERNAME"]
           password = os.environ["FTP_PASSWORD"]
 
-          print("Connecting to Namecheap FTP server...")
+          print("Connecting to Namecheap:", server)
 
           ftp = FTP_TLS(timeout=60)
-          ftp.connect(server, 21)
-          ftp.auth()
-          ftp.login(username, password)
-          ftp.prot_p()
 
-          print("\nFTP CONNECTION SUCCESSFUL")
-          print("Starting directory:", ftp.pwd())
+          try:
+              ftp.connect(server, 21)
+              print("FTP SERVER CONNECTION SUCCESSFUL")
 
-          print("\nDIRECTORY CONTENTS:")
-          ftp.retrlines("LIST")
+              ftp.auth()
+              print("TLS ENCRYPTION SUCCESSFUL")
 
-          print("\nCHECKING POSSIBLE WEBSITE DIRECTORIES:")
+              ftp.login(username, password)
+              print("FTP LOGIN SUCCESSFUL")
 
-          for directory in ["/", "public_html", "/public_html",
-                            "../public_html", "../../public_html"]:
+              ftp.prot_p()
+              print("SECURE DATA CONNECTION ENABLED")
+
+              print("\nSTARTING DIRECTORY:")
+              print(ftp.pwd())
+
+              print("\nDIRECTORY CONTENTS:")
+              ftp.retrlines("LIST")
+
+              print("\nCHECKING WEBSITE DIRECTORIES:")
+
+              directories = [
+                  "/",
+                  "/public_html",
+                  "public_html",
+                  "/home/tanzgupn/public_html"
+              ]
+
+              for directory in directories:
+                  try:
+                      ftp.cwd(directory)
+                      print("ACCESSIBLE:", directory)
+                      print("ACTUAL PATH:", ftp.pwd())
+                      ftp.cwd("/")
+                  except Exception as error:
+                      print("NOT ACCESSIBLE:", directory)
+                      print("Reason:", error)
+
+              ftp.quit()
+              print("\nFTP DIAGNOSTIC COMPLETED SUCCESSFULLY")
+
+          except Exception as error:
+              print("\nFTP DIAGNOSTIC FAILED:", error)
               try:
-                  ftp.cwd(directory)
-                  print("Accessible:", directory, "=>", ftp.pwd())
-                  ftp.cwd("/")
-              except Exception as error:
-                  print("Not accessible:", directory, "-", error)
-
-          ftp.quit()
-          print("\nFTP DIRECTORY CHECK COMPLETED.")
+                  ftp.close()
+              except Exception:
+                  pass
+              raise
           PY
