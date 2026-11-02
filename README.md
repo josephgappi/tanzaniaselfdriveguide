@@ -66,4 +66,4 @@ Website deployment is automated through GitHub Actions.
 
 ## Maintainer
 
-Joseph Gappi/ African Clay Safaris Developer
+Joseph Emanuel Gappi/ African Clay Safaris Developer
