@@ -1,5 +1,5 @@
 
-name: Deploy Website to Namecheap
+name: Deploy Website to Namecheape
 
 on:
   push:
