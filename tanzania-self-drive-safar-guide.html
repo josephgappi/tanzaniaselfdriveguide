@@ -1,0 +1,1667 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Tanzania Self Drive Guide | Roads, Routes, Parks & Travel Updates</title>
+
+    <meta name="description" content="Tanzania Self Drive Guide — practical information, routes, driving advice, national park guides, camping tips, costs and travel updates for exploring Tanzania independently.">
+
+    <meta name="keywords" content="Tanzania self drive guide, self drive Tanzania, Tanzania self drive safari, driving in Tanzania, Tanzania road trip, Tanzania national parks, Tanzania self drive routes">
+
+    <meta name="author" content="Tanzania Self Drive Guide">
+
+    <style>
+        :root {
+            --forest: #24352A;
+            --forest-light: #304638;
+            --ochre: #C28B3C;
+            --ochre-dark: #A97229;
+            --ivory: #F7F4EC;
+            --white: #FFFFFF;
+            --text: #252525;
+            --muted: #6B6B63;
+            --blue: #2F6475;
+            --border: #DED9CC;
+            --shadow: 0 12px 35px rgba(36, 53, 42, 0.10);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: var(--ivory);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        img {
+            width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: min(1180px, 92%);
+            margin: auto;
+        }
+
+        /* =========================
+           TOP BAR
+        ========================= */
+
+        .top-bar {
+            background: var(--forest);
+            color: #fff;
+            font-size: 13px;
+            padding: 8px 0;
+        }
+
+        .top-bar-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-bar span {
+            opacity: 0.9;
+        }
+
+        /* =========================
+           HEADER
+        ========================= */
+
+        header {
+            background: var(--white);
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 800;
+            color: var(--forest);
+            letter-spacing: -0.4px;
+        }
+
+        .logo-mark {
+            width: 42px;
+            height: 42px;
+            background: var(--forest);
+            color: var(--ochre);
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-size: 19px;
+            font-weight: 900;
+        }
+
+        .logo-text {
+            font-size: 17px;
+            line-height: 1.1;
+        }
+
+        .logo-text small {
+            display: block;
+            font-size: 10px;
+            color: var(--muted);
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            margin-top: 3px;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a {
+            color: #3c433e;
+            transition: 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--ochre-dark);
+        }
+
+        .nav-button {
+            background: var(--ochre);
+            color: white !important;
+            padding: 11px 17px;
+            border-radius: 8px;
+        }
+
+        .nav-button:hover {
+            background: var(--ochre-dark);
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 28px;
+            color: var(--forest);
+            cursor: pointer;
+        }
+
+        /* =========================
+           HERO
+        ========================= */
+
+        .hero {
+            min-height: 650px;
+            background:
+                linear-gradient(
+                    90deg,
+                    rgba(20, 31, 24, 0.88) 0%,
+                    rgba(20, 31, 24, 0.70) 45%,
+                    rgba(20, 31, 24, 0.20) 100%
+                ),
+                url("images/tanzania-self-drive.jpg") center/cover no-repeat;
+
+            display: flex;
+            align-items: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            padding: 80px 0;
+        }
+
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #f1d49c;
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .eyebrow::before {
+            content: "";
+            width: 30px;
+            height: 2px;
+            background: var(--ochre);
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 6vw, 72px);
+            line-height: 1.02;
+            letter-spacing: -2px;
+            margin-bottom: 24px;
+        }
+
+        .hero h1 span {
+            color: #e0b866;
+        }
+
+        .hero p {
+            font-size: 19px;
+            line-height: 1.7;
+            max-width: 650px;
+            color: rgba(255,255,255,0.90);
+            margin-bottom: 32px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 21px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 700;
+            transition: 0.2s;
+        }
+
+        .btn-primary {
+            background: var(--ochre);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--ochre-dark);
+            transform: translateY(-1px);
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.55);
+            color: white;
+            background: rgba(255,255,255,0.06);
+        }
+
+        .btn-outline:hover {
+            background: rgba(255,255,255,0.14);
+        }
+
+        /* =========================
+           INTRO
+        ========================= */
+
+        .intro {
+            background: var(--white);
+            padding: 70px 0;
+        }
+
+        .intro-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.3fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .section-label {
+            color: var(--ochre-dark);
+            font-size: 12px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .intro h2 {
+            font-size: 38px;
+            line-height: 1.15;
+            color: var(--forest);
+            margin-bottom: 18px;
+        }
+
+        .intro p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .intro-note {
+            border-left: 4px solid var(--ochre);
+            padding-left: 22px;
+        }
+
+        .intro-note p {
+            color: #41453f;
+            font-size: 18px;
+        }
+
+        /* =========================
+           CATEGORIES
+        ========================= */
+
+        .categories {
+            padding: 85px 0;
+        }
+
+        .section-heading {
+            max-width: 700px;
+            margin-bottom: 38px;
+        }
+
+        .section-heading h2 {
+            font-size: 38px;
+            color: var(--forest);
+            line-height: 1.15;
+            margin-bottom: 12px;
+        }
+
+        .section-heading p {
+            color: var(--muted);
+            font-size: 16px;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .category-card {
+            background: var(--white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 28px;
+            transition: 0.25s;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+            border-color: #c9bda6;
+        }
+
+        .category-icon {
+            width: 48px;
+            height: 48px;
+            display: grid;
+            place-items: center;
+            border-radius: 12px;
+            background: #eee8db;
+            color: var(--forest);
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+
+        .category-card h3 {
+            color: var(--forest);
+            margin-bottom: 8px;
+            font-size: 20px;
+        }
+
+        .category-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 17px;
+        }
+
+        .card-link {
+            color: var(--blue);
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        /* =========================
+           POPULAR GUIDES
+        ========================= */
+
+        .guides {
+            background: var(--white);
+            padding: 85px 0;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 22px;
+        }
+
+        .guide-card {
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            overflow: hidden;
+            background: white;
+            transition: 0.25s;
+        }
+
+        .guide-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow);
+        }
+
+        .guide-image {
+            height: 210px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .guide-content {
+            padding: 24px;
+        }
+
+        .guide-tag {
+            display: inline-block;
+            background: #eee8db;
+            color: var(--ochre-dark);
+            padding: 5px 9px;
+            border-radius: 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+
+        .guide-card h3 {
+            color: var(--forest);
+            font-size: 21px;
+            line-height: 1.3;
+            margin-bottom: 9px;
+        }
+
+        .guide-card p {
+            color: var(--muted);
+            font-size: 14px;
+            margin-bottom: 18px;
+        }
+
+        /* =========================
+           UPDATES
+        ========================= */
+
+        .updates {
+            padding: 85px 0;
+            background: var(--ivory);
+        }
+
+        .update-layout {
+            display: grid;
+            grid-template-columns: 1.4fr 0.8fr;
+            gap: 35px;
+        }
+
+        .update-main {
+            background: var(--forest);
+            color: white;
+            border-radius: var(--radius);
+            padding: 38px;
+        }
+
+        .update-badge {
+            display: inline-block;
+            background: var(--ochre);
+            padding: 6px 10px;
+            border-radius: 5px;
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .update-main h3 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+
+        .update-main p {
+            color: rgba(255,255,255,0.78);
+            margin-bottom: 25px;
+        }
+
+        .update-date {
+            font-size: 12px;
+            color: #d9c99f;
+            margin-bottom: 16px;
+        }
+
+        .update-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .update-item {
+            background: white;
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .update-item span {
+            display: block;
+            color: var(--ochre-dark);
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 6px;
+        }
+
+        .update-item h4 {
+            color: var(--forest);
+            margin-bottom: 5px;
+        }
+
+        .update-item p {
+            font-size: 13px;
+            color: var(--muted);
+        }
+
+        /* =========================
+           ROUTES
+        ========================= */
+
+        .routes {
+            background: var(--forest);
+            color: white;
+            padding: 85px 0;
+        }
+
+        .routes .section-heading h2 {
+            color: white;
+        }
+
+        .routes .section-heading p {
+            color: rgba(255,255,255,0.72);
+        }
+
+        .route-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 18px;
+        }
+
+        .route-card {
+            border: 1px solid rgba(255,255,255,0.15);
+            background: rgba(255,255,255,0.06);
+            border-radius: var(--radius);
+            padding: 25px;
+        }
+
+        .route-card small {
+            color: #d7b873;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 800;
+            font-size: 10px;
+        }
+
+        .route-card h3 {
+            margin: 8px 0;
+            font-size: 21px;
+        }
+
+        .route-card p {
+            color: rgba(255,255,255,0.68);
+            font-size: 14px;
+        }
+
+        /* =========================
+           AFRICAN CLAY CTA
+        ========================= */
+
+        .help {
+            padding: 85px 0;
+            background: var(--white);
+        }
+
+        .help-box {
+            background: #eee8db;
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            padding: 50px;
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: 40px;
+            align-items: center;
+        }
+
+        .help-box h2 {
+            color: var(--forest);
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .help-box p {
+            color: var(--muted);
+            max-width: 720px;
+        }
+
+        .help-box strong {
+            color: var(--forest);
+        }
+
+        /* =========================
+           FOOTER
+        ========================= */
+
+        footer {
+            background: #19251d;
+            color: white;
+            padding: 55px 0 25px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.3fr 1fr 1fr;
+            gap: 50px;
+            margin-bottom: 45px;
+        }
+
+        footer h3 {
+            margin-bottom: 14px;
+        }
+
+        footer p {
+            color: rgba(255,255,255,0.62);
+            font-size: 14px;
+        }
+
+        footer ul {
+            list-style: none;
+        }
+
+        footer li {
+            margin-bottom: 8px;
+        }
+
+        footer li a {
+            color: rgba(255,255,255,0.65);
+            font-size: 14px;
+        }
+
+        footer li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            font-size: 12px;
+            color: rgba(255,255,255,0.45);
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 900px) {
+
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 76px;
+                left: 0;
+                right: 0;
+                background: white;
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 25px;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .hero {
+                min-height: 580px;
+            }
+
+            .intro-grid,
+            .update-layout,
+            .help-box {
+                grid-template-columns: 1fr;
+            }
+
+            .category-grid,
+            .guide-grid,
+            .route-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .help-box {
+                padding: 35px;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .top-bar {
+                display: none;
+            }
+
+            .nav {
+                min-height: 68px;
+            }
+
+            .nav-links {
+                top: 68px;
+            }
+
+            .logo-text {
+                font-size: 15px;
+            }
+
+            .hero {
+                min-height: 600px;
+            }
+
+            .hero h1 {
+                font-size: 45px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .intro,
+            .categories,
+            .guides,
+            .updates,
+            .routes,
+            .help {
+                padding: 60px 0;
+            }
+
+            .section-heading h2,
+            .intro h2 {
+                font-size: 30px;
+            }
+
+            .category-grid,
+            .guide-grid,
+            .route-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .update-main {
+                padding: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .footer-bottom {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- =========================
+     TOP BAR
+========================= -->
+
+<div class="top-bar">
+    <div class="container top-bar-inner">
+        <span>Practical information for independent travellers in Tanzania</span>
+        <span>Updated information • Tanzania</span>
+    </div>
+</div>
+
+
+<!-- =========================
+     HEADER
+========================= -->
+
+<header>
+    <div class="container nav">
+
+        <a href="#" class="logo">
+
+            <div class="logo-mark">
+                T
+            </div>
+
+            <div class="logo-text">
+                Tanzania Self Drive
+                <small>Guide</small>
+            </div>
+
+        </a>
+
+        <button class="menu-toggle" aria-label="Open menu">
+            ☰
+        </button>
+
+        <nav class="nav-links">
+
+            <a href="#start">Start Here</a>
+            <a href="#guides">Guides</a>
+            <a href="#parks">National Parks</a>
+            <a href="#routes">Routes</a>
+            <a href="#updates">Updates</a>
+
+            <a href="#help" class="nav-button">
+                Need Help?
+            </a>
+
+        </nav>
+
+    </div>
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                Explore Tanzania Independently
+            </div>
+
+            <h1>
+                Tanzania<br>
+                <span>Self Drive Guide</span>
+            </h1>
+
+            <p>
+                Practical information, driving advice, routes, national park
+                guides, camping tips, costs and travel updates for travellers
+                exploring Tanzania on their own.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#start" class="btn btn-primary">
+                    Start Your Research
+                </a>
+
+                <a href="#updates" class="btn btn-outline">
+                    Latest Updates
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section class="intro" id="start">
+
+    <div class="container intro-grid">
+
+        <div>
+
+            <div class="section-label">
+                Start here
+            </div>
+
+            <h2>
+                Planning to drive Tanzania yourself?
+            </h2>
+
+            <p>
+                Self-driving through Tanzania is very different from taking
+                a conventional guided safari. Understanding the roads,
+                national parks, vehicle requirements, camping, costs and
+                local rules can make a major difference to your trip.
+            </p>
+
+        </div>
+
+        <div class="intro-note">
+
+            <p>
+                <strong>
+                    This guide is built to answer the practical questions
+                    travellers ask before getting behind the wheel.
+                </strong>
+            </p>
+
+            <br>
+
+            <p>
+                We focus on useful information rather than simply telling
+                you where to book a safari.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EXPLORE CATEGORIES
+========================= -->
+
+<section class="categories">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Explore the guide
+            </div>
+
+            <h2>
+                Everything you need to understand Tanzania self-drive
+            </h2>
+
+            <p>
+                Start with the topic you need and build your trip from there.
+            </p>
+
+        </div>
+
+
+        <div class="category-grid">
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    🚙
+                </div>
+
+                <h3>Driving</h3>
+
+                <p>
+                    Driving rules, documents, road conditions, navigation,
+                    fuel, safety and what to expect behind the wheel.
+                </p>
+
+                <a href="#" class="card-link">
+                    Explore driving →
+                </a>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    🦁
+                </div>
+
+                <h3>National Parks</h3>
+
+                <p>
+                    Practical information about driving in Serengeti,
+                    Ngorongoro, Tarangire and other parks.
+                </p>
+
+                <a href="#" class="card-link">
+                    Explore parks →
+                </a>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    🗺️
+                </div>
+
+                <h3>Routes</h3>
+
+                <p>
+                    Self-drive routes, distances, realistic driving times
+                    and itinerary ideas around Tanzania.
+                </p>
+
+                <a href="#routes" class="card-link">
+                    Explore routes →
+                </a>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    💰
+                </div>
+
+                <h3>Costs</h3>
+
+                <p>
+                    Understand vehicle rental, fuel, park fees, camping and
+                    the other costs involved in a self-drive trip.
+                </p>
+
+                <a href="#" class="card-link">
+                    Explore costs →
+                </a>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    ⛺
+                </div>
+
+                <h3>Camping</h3>
+
+                <p>
+                    Rooftop tents, ground tents, equipment, food, water,
+                    campsites and practical camping information.
+                </p>
+
+                <a href="#" class="card-link">
+                    Explore camping →
+                </a>
+
+            </article>
+
+
+            <article class="category-card">
+
+                <div class="category-icon">
+                    📢
+                </div>
+
+                <h3>Travel Updates</h3>
+
+                <p>
+                    Important changes involving fees, rules, roads,
+                    regulations and other self-drive information.
+                </p>
+
+                <a href="#updates" class="card-link">
+                    See updates →
+                </a>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     POPULAR GUIDES
+========================= -->
+
+<section class="guides" id="guides">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Popular guides
+            </div>
+
+            <h2>
+                Start with the questions travellers ask most
+            </h2>
+
+            <p>
+                Straightforward answers to help you understand what a
+                Tanzania self-drive trip actually involves.
+            </p>
+
+        </div>
+
+
+        <div class="guide-grid">
+
+
+            <article class="guide-card">
+
+                <div
+                    class="guide-image"
+                    style="background-image:url('images/4x4-tanzania.jpg');">
+                </div>
+
+                <div class="guide-content">
+
+                    <span class="guide-tag">
+                        Beginner
+                    </span>
+
+                    <h3>
+                        Can You Self-Drive in Tanzania?
+                    </h3>
+
+                    <p>
+                        What first-time visitors should know before planning
+                        an independent safari.
+                    </p>
+
+                    <a href="#" class="card-link">
+                        Read guide →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card">
+
+                <div
+                    class="guide-image"
+                    style="background-image:url('images/serengeti-road.jpg');">
+                </div>
+
+                <div class="guide-content">
+
+                    <span class="guide-tag">
+                        National Parks
+                    </span>
+
+                    <h3>
+                        Self-Driving in Serengeti
+                    </h3>
+
+                    <p>
+                        Roads, navigation, wildlife, practical preparation
+                        and what independent travellers should consider.
+                    </p>
+
+                    <a href="#" class="card-link">
+                        Read guide →
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <article class="guide-card">
+
+                <div
+                    class="guide-image"
+                    style="background-image:url('images/tanzania-camping.jpg');">
+                </div>
+
+                <div class="guide-content">
+
+                    <span class="guide-tag">
+                        Planning
+                    </span>
+
+                    <h3>
+                        Tanzania Self-Drive Costs
+                    </h3>
+
+                    <p>
+                        A practical breakdown of the major expenses involved
+                        in planning your own safari.
+                    </p>
+
+                    <a href="#" class="card-link">
+                        Read guide →
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     UPDATES
+========================= -->
+
+<section class="updates" id="updates">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Stay informed
+            </div>
+
+            <h2>
+                Tanzania Self-Drive Updates
+            </h2>
+
+            <p>
+                Important information can change. Check the latest updates
+                before starting your journey.
+            </p>
+
+        </div>
+
+
+        <div class="update-layout">
+
+
+            <article class="update-main">
+
+                <span class="update-badge">
+                    Featured update
+                </span>
+
+                <div class="update-date">
+                    LAST CHECKED • SEPTEMBER 2026
+                </div>
+
+                <h3>
+                    Tanzania Self-Drive Information
+                    & Regulations
+                </h3>
+
+                <p>
+                    Before travelling, check current requirements,
+                    national park rules, fees and road conditions.
+                    Our updates section will track important changes
+                    affecting independent travellers.
+                </p>
+
+                <a href="#" class="btn btn-primary">
+                    View latest information
+                </a>
+
+            </article>
+
+
+            <div class="update-list">
+
+                <article class="update-item">
+
+                    <span>
+                        Park information
+                    </span>
+
+                    <h4>
+                        National park fees
+                    </h4>
+
+                    <p>
+                        Check current park and conservation fees before
+                        budgeting your trip.
+                    </p>
+
+                </article>
+
+
+                <article class="update-item">
+
+                    <span>
+                        Roads
+                    </span>
+
+                    <h4>
+                        Road conditions
+                    </h4>
+
+                    <p>
+                        Practical information about routes and seasonal
+                        driving conditions.
+                    </p>
+
+                </article>
+
+
+                <article class="update-item">
+
+                    <span>
+                        Regulations
+                    </span>
+
+                    <h4>
+                        Self-drive requirements
+                    </h4>
+
+                    <p>
+                        Important requirements and rules for independent
+                        travellers.
+                    </p>
+
+                </article>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROUTES
+========================= -->
+
+<section class="routes" id="routes">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="section-label">
+                Plan your journey
+            </div>
+
+            <h2>
+                Tanzania Self-Drive Routes
+            </h2>
+
+            <p>
+                Explore route ideas based on the time you have available
+                and the parts of Tanzania you want to experience.
+            </p>
+
+        </div>
+
+
+        <div class="route-grid">
+
+
+            <article class="route-card">
+
+                <small>
+                    Short trip
+                </small>
+
+                <h3>
+                    5–7 Day Self-Drive
+                </h3>
+
+                <p>
+                    Ideas for travellers with limited time who want to
+                    experience part of Tanzania's Northern Circuit.
+                </p>
+
+            </article>
+
+
+            <article class="route-card">
+
+                <small>
+                    Classic journey
+                </small>
+
+                <h3>
+                    10-Day Self-Drive
+                </h3>
+
+                <p>
+                    A longer route allowing more time for wildlife,
+                    landscapes and different national parks.
+                </p>
+
+            </article>
+
+
+            <article class="route-card">
+
+                <small>
+                    Extended adventure
+                </small>
+
+                <h3>
+                    14-Day Self-Drive
+                </h3>
+
+                <p>
+                    More time for slower travel, camping and combining
+                    several destinations.
+                </p>
+
+            </article>
+
+
+            <article class="route-card">
+
+                <small>
+                    Northern Tanzania
+                </small>
+
+                <h3>
+                    Northern Circuit
+                </h3>
+
+                <p>
+                    Arusha, Tarangire, Ngorongoro, Serengeti and other
+                    destinations.
+                </p>
+
+            </article>
+
+
+            <article class="route-card">
+
+                <small>
+                    Southern Tanzania
+                </small>
+
+                <h3>
+                    Southern Circuit
+                </h3>
+
+                <p>
+                    Explore the less-visited southern safari destinations
+                    and plan a different kind of road adventure.
+                </p>
+
+            </article>
+
+
+            <article class="route-card">
+
+                <small>
+                    Custom planning
+                </small>
+
+                <h3>
+                    Build Your Own Route
+                </h3>
+
+                <p>
+                    Combine parks, towns, camping and other destinations
+                    around your own travel plans.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     AFRICAN CLAY CONNECTION
+========================= -->
+
+<section class="help" id="help">
+
+    <div class="container">
+
+        <div class="help-box">
+
+            <div>
+
+                <div class="section-label">
+                    Need practical help?
+                </div>
+
+                <h2>
+                    Ready to turn your research into a real trip?
+                </h2>
+
+                <p>
+                    Tanzania Self Drive Guide focuses on information.
+                    If you need help choosing a vehicle, preparing camping
+                    equipment or planning a self-drive safari in Tanzania,
+                    <strong>African Clay Safaris</strong> is a
+                    Tanzania-based company that can assist with the
+                    practical side of your journey.
+                </p>
+
+            </div>
+
+            <a
+                href="https://www.africanclaysafaris.com"
+                class="btn btn-primary"
+                target="_blank"
+                rel="noopener">
+                Visit African Clay
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="container">
+
+        <div class="footer-grid">
+
+            <div>
+
+                <h3>
+                    Tanzania Self Drive Guide
+                </h3>
+
+                <p>
+                    Practical information for travellers planning to
+                    explore Tanzania independently by road.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Explore
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">Driving Guide</a>
+                    </li>
+
+                    <li>
+                        <a href="#">National Parks</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Self-Drive Routes</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Costs</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Camping</a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Information
+                </h3>
+
+                <ul>
+
+                    <li>
+                        <a href="#">Latest Updates</a>
+                    </li>
+
+                    <li>
+                        <a href="#">About the Guide</a>
+                    </li>
+
+                    <li>
+                        <a href="#">Contact</a>
+                    </li>
+
+                    <li>
+                        <a
+                            href="https://www.africanclaysafaris.com"
+                            target="_blank"
+                            rel="noopener">
+                            African Clay Safaris
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <span>
+                © 2026 Tanzania Self Drive Guide
+            </span>
+
+            <span>
+                Information • Planning • Exploration
+            </span>
+
+        </div>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.querySelector(".nav-links");
+
+    menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+    });
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+        link.addEventListener("click", () => {
+            navLinks.classList.remove("active");
+        });
+    });
+
+</script>
+
+</body>
+</html>
